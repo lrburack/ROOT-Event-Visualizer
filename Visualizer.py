@@ -23,7 +23,9 @@ class Visualizer:
         # 3. Go through modifications
         # 4. Render
 
-        tree.GetEntry(event_index)
+        nbytes = tree.GetEntry(event_index)
+        if nbytes <= 0:
+            raise ValueError(f"Could not load event {event_index} from tree {tree.GetName()} with {tree.GetEntries()} entries.")
 
         # Collect nodes
         ids = tree.GenPart_pdgId
