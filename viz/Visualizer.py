@@ -6,6 +6,13 @@ import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 import numpy as np
 
+class Modifier:
+    def __init__(self):
+        pass
+
+    def apply(self, node_props, tree):
+        return node_props
+
 class Visualizer:
     default_format = {"shape": "circle", "style": "filled", "fontname": "Times"}
     default_graph_attrs = {"rankdir": "TB", "splines": "true"}
@@ -63,13 +70,6 @@ class Visualizer:
         return g
     
 #  ---------- Modifiers ----------
-
-class Modifier:
-    def __init__(self):
-        pass
-
-    def apply(self, node_props, tree):
-        return node_props
 
 class ColorByProp(Modifier):
     def __init__(self, prop_name, cmap=None, colorbar=True, colorbar_label=None):
