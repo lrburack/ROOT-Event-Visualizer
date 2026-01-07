@@ -10,3 +10,21 @@ Configurable event visualizer for making particle trees from ROOT files
 
 
 Appearance is fully customizable through creating custom implementations of the Modifer class. Currently implemented are modifiers to color and annotate nodes with particle attributes. 
+
+## Installation
+`pip install git+https://github.com/lrburack/ROOT-Event-Visualizer.git`
+
+Package dependencies:
+`conda install conda-forge::root`
+`pip install graphviz numpy matplotlib particle`
+
+## Commandline usage
+With the package installed, you can run 
+`viz [root_file] [event_number] [options and flags]`
+
+Options:
+- --treename. The tree name to read events from ("Events" by default)
+- -s/--save. Save the svg image?
+- -do/--dont_open. Don't open the image in your browser?
+- --color_by. The branch to color nodes by ("GenPart_pt" by default)
+- --annotate. Branches to annotate. List space separated after flag 
