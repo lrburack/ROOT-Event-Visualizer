@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "viz"                   # this can be the same or different from folder name
+version = "0.1.0"
+description = "Customizable utility for ROOT event tree diagrams"
+authors = [{name = "Linden Burack", email = "linden.burack@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+
+
+[project.scripts]
+viz = "viz.cli:main"

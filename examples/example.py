@@ -1,6 +1,6 @@
 import ROOT
 import matplotlib.pyplot as plt
-from Visualizer import *
+from viz.Visualizer import *
 import sys
 
 eventnum = int(sys.argv[1]) if len(sys.argv) > 1 else 0
